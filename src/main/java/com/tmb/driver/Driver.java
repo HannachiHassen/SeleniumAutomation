@@ -2,24 +2,23 @@ package com.tmb.driver;
 
 import java.util.Objects;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.tmb.constans.FrameworkConstants;
+import com.utils.ReadPropertyFile;
 
 public final class Driver {
-	private static WebDriver driver;
-	
+		
 	private Driver() {
 		
 	}
 
-	public static void initDriver() {
-		if(Objects.isNull(driver)) {
+	public static void initDriver() throws Exception {
+		if(Objects.isNull(DriverManager.getDriver())) {
 			System.setProperty("webdriver.chrome.driver", FrameworkConstants.getChromeDriverpath());
-			driver= new ChromeDriver();	
-			DriverManager.setDriver(driver);
-			DriverManager.getDriver().get("https://google.com");
+		
+			DriverManager.setDriver(new ChromeDriver());
+			DriverManager.getDriver().get(ReadPropertyFile.getValue("url"));
 		}
 	}
 
