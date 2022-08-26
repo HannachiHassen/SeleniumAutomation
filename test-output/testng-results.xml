@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-08-26T15:12:29 EDT" name="Suite" finished-at="2022-08-26T15:13:28 EDT" duration-ms="58961">
+    <groups>
+    </groups>
+    <test started-at="2022-08-26T15:12:29 EDT" name="Test" finished-at="2022-08-26T15:13:28 EDT" duration-ms="58961">
+      <class name="org.tmb.tests.LoginpageTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.tmb.tests.LoginpageTests@1bb266b3]" started-at="2022-08-26T15:12:29 EDT" name="setUp" finished-at="2022-08-26T15:13:19 EDT" duration-ms="49699" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="test1()[pri:0, instance:org.tmb.tests.LoginpageTests@1bb266b3]" started-at="2022-08-26T15:13:19 EDT" name="test1" finished-at="2022-08-26T15:13:27 EDT" duration-ms="8102" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.tmb.tests.LoginpageTests@1bb266b3]" started-at="2022-08-26T15:13:27 EDT" name="tearDown" finished-at="2022-08-26T15:13:28 EDT" duration-ms="1065" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- org.tmb.tests.LoginpageTests -->
+      <class name="org.tmb.tests.HomepageTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.tmb.tests.HomepageTests@41fecb8b]" started-at="2022-08-26T15:12:29 EDT" name="setUp" finished-at="2022-08-26T15:13:17 EDT" duration-ms="48160" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="test2()[pri:0, instance:org.tmb.tests.HomepageTests@41fecb8b]" started-at="2022-08-26T15:13:17 EDT" name="test2" finished-at="2022-08-26T15:13:25 EDT" duration-ms="7416" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.tmb.tests.HomepageTests@41fecb8b]" started-at="2022-08-26T15:13:25 EDT" name="tearDown" finished-at="2022-08-26T15:13:26 EDT" duration-ms="1456" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- org.tmb.tests.HomepageTests -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

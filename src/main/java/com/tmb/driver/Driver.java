@@ -18,7 +18,7 @@ public final class Driver {
 			System.setProperty("webdriver.chrome.driver", FrameworkConstants.getChromeDriverpath());
 		
 			DriverManager.setDriver(new ChromeDriver());
-			DriverManager.getDriver().get(ReadPropertyFile.getValue("url"));
+			DriverManager.getDriver().get(ReadPropertyFile.get("url"));
 		}
 	}
 
