@@ -8,12 +8,32 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">46,289</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num attn">2</td><td class="num">29,694</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">org.tmb.tests.LoginpageTests</td><td><a href="#m0">test1</a></td><td rowspan="1">1661528242586</td><td rowspan="1">27848</td></tr><tr class="passedeven"><td><a href="#m1">test2</a></td><td rowspan="1">1661528270443</td><td rowspan="1">18336</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">org.tmb.tests.HomepageTests</td><td><a href="#m0">tearDown</a></td><td rowspan="1">1661530890721</td><td rowspan="1">0</td></tr><tr class="failedodd"><td rowspan="1">org.tmb.tests.LoginpageTests</td><td><a href="#m1">tearDown</a></td><td rowspan="1">1661530877721</td><td rowspan="1">0</td></tr><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">org.tmb.tests.HomepageTests</td><td><a href="#m2">test3</a></td><td rowspan="1">1661530890715</td><td rowspan="1">2</td></tr><tr class="failedodd"><td rowspan="1">org.tmb.tests.LoginpageTests</td><td><a href="#m3">test1</a></td><td rowspan="1">1661530877652</td><td rowspan="1">32</td></tr><tr><th colspan="4">Test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">org.tmb.tests.LoginpageTests</td><td><a href="#m4">setUp</a></td><td rowspan="1">1661530877757</td><td rowspan="1">-1661530877757</td></tr><tr class="skippedeven"><td><a href="#m5">tearDown</a></td><td rowspan="1">1661530877767</td><td rowspan="1">-1661530877767</td></tr><tr><th colspan="4">Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">org.tmb.tests.LoginpageTests</td><td><a href="#m6">test2</a></td><td rowspan="1">1661530877760</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">org.tmb.tests.LoginpageTests#test1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">org.tmb.tests.LoginpageTests#test2</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">org.tmb.tests.HomepageTests#tearDown</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at org.tmb.tests.BaseTest.tearDown(BaseTest.java:23)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">org.tmb.tests.LoginpageTests#tearDown</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at org.tmb.tests.BaseTest.tearDown(BaseTest.java:23)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">org.tmb.tests.HomepageTests#test3</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at org.tmb.tests.HomepageTests.test3(HomepageTests.java:10)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">org.tmb.tests.LoginpageTests#test1</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at org.tmb.tests.LoginpageTests.test1(LoginpageTests.java:11)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">org.tmb.tests.LoginpageTests#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">org.tmb.tests.LoginpageTests#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">org.tmb.tests.LoginpageTests#test2</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at org.tmb.tests.BaseTest.tearDown(BaseTest.java:23)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

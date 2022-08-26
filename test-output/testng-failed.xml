@@ -3,10 +3,19 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="org.tmb.tests.HomepageTests">
+        <methods>
+          <include name="setUp"/>
+          <include name="test3"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- org.tmb.tests.HomepageTests -->
       <class name="org.tmb.tests.LoginpageTests">
         <methods>
           <include name="test2"/>
+          <include name="setUp"/>
           <include name="test1"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- org.tmb.tests.LoginpageTests -->
     </classes>
