@@ -8,6 +8,7 @@ public final class FrameworkConstants {
 	
     private static final String RESOURCESPATH= System.getProperty("user.dir") +"/src/test/resources/";
 	private static final String CHROMEDRIVERPATH= RESOURCESPATH + "/executables/chromedriver.exe";
+	private static final String FIREFOXDRIVERPATH= RESOURCESPATH + "/executables/geckodriver.exe";
 	private static final String CONFIGFILEPATH= RESOURCESPATH + "/config/config.properties";
 	
 	
@@ -18,5 +19,9 @@ public final class FrameworkConstants {
 
 	public static String getConfigfilepath() {
 		return CONFIGFILEPATH;
+	}
+
+	public static String getFirefoxdriverpath() {
+		return FIREFOXDRIVERPATH;
 	}
 }

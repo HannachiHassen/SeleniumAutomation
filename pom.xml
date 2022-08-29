@@ -3,7 +3,7 @@
   <groupId>org.testnghassen</groupId>
   <artifactId>SeleniumAutomation</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-
+  
 <dependencies>
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
     <dependency>
@@ -17,6 +17,7 @@
       <artifactId>testng</artifactId>
       <version>7.4.0</version>
     </dependency>
+   
     <!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
     <dependency>
      <groupId>org.assertj</groupId>

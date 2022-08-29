@@ -1,4 +1,4 @@
-package com.utils;
+package com.tmb.utils;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -16,7 +16,7 @@ public final class ReadPropertyFile {
 	}
 
 	private static Properties property= new Properties();
-	private static final Map<String, String> CONFIGMAP= new HashMap<String, String>();
+	private static final Map<String, String> CONFIGMAP= new HashMap<>();
 
 	static {
 		try {
@@ -24,7 +24,7 @@ public final class ReadPropertyFile {
 			property.load(file);
 			
 			for (Map.Entry<Object, Object> entry : property.entrySet()) {
-				CONFIGMAP.put(String.valueOf(entry.getKey()), String.valueOf(entry.getValue()));				
+				CONFIGMAP.put(String.valueOf(entry.getKey()), String.valueOf(entry.getValue()).trim()); //remove the trailing and leading spaces		
 			}
 			
 			//property.entrySet().forEach(entry ->CONFIGMAP.put(String.valueOf(entry.getKey()), String.valueOf(entry.getValue()));
