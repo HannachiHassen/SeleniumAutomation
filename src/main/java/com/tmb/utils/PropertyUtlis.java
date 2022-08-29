@@ -8,10 +8,11 @@ import java.util.Objects;
 import java.util.Properties;
 
 import com.tmb.constans.FrameworkConstants;
+import com.tmb.enums.ConfigProperties;
 
-public final class ReadPropertyFile {
+public final class PropertyUtlis {
 
-	private ReadPropertyFile() {
+	private PropertyUtlis() {
 
 	}
 
@@ -38,11 +39,11 @@ public final class ReadPropertyFile {
 	
 	// Hashmap ---read everything from properties file
 	// Converting a property to hashmap needs some time	
-	public static String get(String key) throws Exception {
+	public static String get(ConfigProperties key) throws Exception {
 		if (Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key))) {
 			throw new Exception("Property name "+ key +" is not fournd. Please check config.properties");
 		}
-		return CONFIGMAP.get(key);
+		return CONFIGMAP.get(key.name().toLowerCase());
 	}
 	
 	//Hashtable -- little slow, thread safe

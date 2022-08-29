@@ -2,7 +2,7 @@ package com.crmpro.pages;
 
 import org.openqa.selenium.By;
 
-import com.tmb.driver.DriverManager;
+import com.tmb.enums.WaitStrategy;
 
 public final class OrangeHRMLoginPage extends BasePage{
 	/*
@@ -15,16 +15,16 @@ public final class OrangeHRMLoginPage extends BasePage{
 	private final By buttonLogin =By.xpath("//button[@type='submit']");
 	
 	public OrangeHRMLoginPage enterUserName(String username) {
-		sendKeys(textboxUsername,username);
+		sendKeys(textboxUsername, username, WaitStrategy.PRESENCE);
 		return this;
 	}
 	
 	public OrangeHRMLoginPage enterPassword(String password) {
-		sendKeys(textboxPassword, password);
+		sendKeys(textboxPassword, password, WaitStrategy.PRESENCE);
 		return this;
 	}
 	public OrangeHRMHomePage clickLogin() {
-		click(buttonLogin);
+		click(buttonLogin, WaitStrategy.CLICKABLE);
 		return new OrangeHRMHomePage();
 	}
 	

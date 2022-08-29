@@ -1,22 +1,26 @@
 package com.crmpro.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.tmb.constans.FrameworkConstants;
 import com.tmb.driver.DriverManager;
+import com.tmb.enums.WaitStrategy;
+import com.tmb.factories.ExplicitWaitFactory;
 
 public class BasePage {
 	
-	protected void click(By by) {
-		explicityWaitForElementToBeClickable(by);
-		DriverManager.getDriver().findElement(by).click();
+	protected void click(By by, WaitStrategy waitstrategy) {
+		WebElement element= ExplicitWaitFactory.preformExplicitWait(by, waitstrategy);
+		element.click();		
 	}
 	
-	protected void sendKeys(By by, String value) {
-		explicityWaitForElementToBeClickable(by);
-		DriverManager.getDriver().findElement(by).sendKeys(value);
+	protected void sendKeys(By by, WaitStrategy waitstrategy, String value) {
+		
+		WebElement element= ExplicitWaitFactory.preformExplicitWait(by, waitstrategy);
+		element.sendKeys(value);
 	}
 	
 	protected String getPageTitle() {
