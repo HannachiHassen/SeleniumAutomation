@@ -14,10 +14,10 @@ public final class OrangeHRMTests extends BaseTest{
     @Test	
     public void loginLogoutTest() {
     	String title= new OrangeHRMLoginPage()
-    			.enterUserName("Admin").enterPassword("admin123").clickLoginButton()
+    			.enterUserName("Admin").enterPassword("admin123").clickLogin()
     			.clickDropDown().clickLogout()
     			.getTitle();
-    	
+ 
     	Assertions.assertThat(title)
     	.isEqualTo("OrangeHRM");
 	}

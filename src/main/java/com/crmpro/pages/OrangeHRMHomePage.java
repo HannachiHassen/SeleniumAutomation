@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.tmb.driver.DriverManager;
 
-public class OrangeHRMHomePage {
+public final class OrangeHRMHomePage extends BasePage{
 	//link
 	//button or btnSubmit
 	//drpdwnCountry
@@ -15,17 +15,14 @@ public class OrangeHRMHomePage {
 	private final By linkLogout=By.id("//a[text()='Logout']");
 	
 	public OrangeHRMHomePage clickDropDown() {
-		DriverManager.getDriver().findElement(linkDropDown).click();
+		click(linkDropDown);
 		return this;
 	}
 	
 	public OrangeHRMLoginPage clickLogout() {
 		//Uninterruptibles.sleepUninterruptibly(3,  TimeUnit.SECONDS);
 		
-	     new WebDriverWait(DriverManager.getDriver(), 10)
-		   .until(ExpectedConditions.elementToBeClickable(linkLogout));  // old fashion way
-		
-		DriverManager.getDriver().findElement(linkLogout).click();	
+		click(linkLogout);
 		return new OrangeHRMLoginPage();
 	}
 	// wait.until(d-> d.findElement(link_logout).isEnabled());     //Java 8 way
