@@ -1,4 +1,4 @@
-package com.crmpro.pages;
+package com.tmb.pages;
 
 import org.openqa.selenium.By;
 
@@ -20,4 +20,8 @@ public final class OrangeHRMHomePage extends BasePage{
 	}
 	//Uninterruptibles.sleepUninterruptibly(3,  TimeUnit.SECONDS);
 	// wait.until(d-> d.findElement(link_logout).isEnabled());     //Java 8 way
+	
+	public String getTitle() {
+		return getPageTitle();
+	}
 }

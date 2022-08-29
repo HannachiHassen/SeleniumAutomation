@@ -11,8 +11,8 @@ import org.testng.annotations.Test;
 
 import com.tmb.constans.FrameworkConstants;
 import com.tmb.driver.DriverManager;
-import com.tmb.utils.ReadPropertyFile;
-
+import com.tmb.enums.ConfigProperties;
+import com.tmb.utils.PropertyUtlis;
 
 public class SimpleTest {
 	public WebDriver driver;
@@ -27,7 +27,7 @@ public class SimpleTest {
 		System.setProperty("webdriver.gecko.driver", FrameworkConstants.getFirefoxdriverpath());
 		
 		DriverManager.setDriver(new FirefoxDriver());
-		DriverManager.getDriver().get(ReadPropertyFile.get("url"));
+		DriverManager.getDriver().get(PropertyUtlis.get(ConfigProperties.URL));
 		
 		DriverManager.getDriver().manage().window().maximize();
 		DriverManager.getDriver().manage().deleteAllCookies();

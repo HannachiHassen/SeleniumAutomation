@@ -3,7 +3,7 @@ package org.tmb.tests;
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 
-import com.crmpro.pages.OrangeHRMLoginPage;
+import com.tmb.pages.OrangeHRMLoginPage;
 
 public final class OrangeHRMTests extends BaseTest{
 	

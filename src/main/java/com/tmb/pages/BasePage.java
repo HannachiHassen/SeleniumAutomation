@@ -1,4 +1,4 @@
-package com.crmpro.pages;
+package com.tmb.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -12,6 +12,10 @@ import com.tmb.factories.ExplicitWaitFactory;
 
 public class BasePage {
 	
+	protected String getPageTitle() {
+		return DriverManager.getDriver().getTitle();
+	}
+	
 	protected void click(By by, WaitStrategy waitstrategy) {
 		WebElement element= ExplicitWaitFactory.preformExplicitWait(by, waitstrategy);
 		element.click();		
@@ -21,11 +25,7 @@ public class BasePage {
 		
 		WebElement element= ExplicitWaitFactory.preformExplicitWait(by, waitstrategy);
 		element.sendKeys(value);
-	}
-	
-	protected String getPageTitle() {
-		return DriverManager.getDriver().getTitle();
-	}
+	}	
 	
 	private void explicityWaitForElementToBeClickable(By by) {
 		new WebDriverWait(DriverManager.getDriver(), FrameworkConstants.getExplicitwait())

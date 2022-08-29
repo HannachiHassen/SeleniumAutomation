@@ -40,7 +40,7 @@ public final class PropertyUtlis {
 	// Hashmap ---read everything from properties file
 	// Converting a property to hashmap needs some time	
 	public static String get(ConfigProperties key) throws Exception {
-		if (Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key))) {
+		if (Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key.name().toLowerCase()))) {
 			throw new Exception("Property name "+ key +" is not fournd. Please check config.properties");
 		}
 		return CONFIGMAP.get(key.name().toLowerCase());

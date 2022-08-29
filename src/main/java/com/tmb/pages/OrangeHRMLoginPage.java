@@ -1,4 +1,4 @@
-package com.crmpro.pages;
+package com.tmb.pages;
 
 import org.openqa.selenium.By;
 
@@ -15,12 +15,12 @@ public final class OrangeHRMLoginPage extends BasePage{
 	private final By buttonLogin =By.xpath("//button[@type='submit']");
 	
 	public OrangeHRMLoginPage enterUserName(String username) {
-		sendKeys(textboxUsername, username, WaitStrategy.PRESENCE);
+		sendKeys(textboxUsername, WaitStrategy.PRESENCE, username);
 		return this;
 	}
 	
 	public OrangeHRMLoginPage enterPassword(String password) {
-		sendKeys(textboxPassword, password, WaitStrategy.PRESENCE);
+		sendKeys(textboxPassword, WaitStrategy.PRESENCE, password);
 		return this;
 	}
 	public OrangeHRMHomePage clickLogin() {
