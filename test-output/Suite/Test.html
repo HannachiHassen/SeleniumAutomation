@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Aug 29 15:56:18 EDT 2022</td>
+<td>Started on:</td><td>Mon Aug 29 19:11:05 EDT 2022</td>
 </tr>
-<tr><td>Total time:</td><td>64 seconds (64849 ms)</td>
+<tr><td>Total time:</td><td>82 seconds (82471 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -80,8 +80,8 @@ function toggleAllBoxes() {
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at com.tmb.factories.ExplicitWaitFactory.preformExplicitWait(ExplicitWaitFactory.java:19)
-	at com.crmpro.pages.BasePage.click(BasePage.java:16)
-	at com.crmpro.pages.OrangeHRMHomePage.clickLogout(OrangeHRMHomePage.java:18)
+	at com.tmb.pages.BasePage.click(BasePage.java:20)
+	at com.tmb.pages.OrangeHRMHomePage.clickLogout(OrangeHRMHomePage.java:18)
 	at org.tmb.tests.OrangeHRMTests.loginLogoutTest(OrangeHRMTests.java:18)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
@@ -91,8 +91,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;HASSEN-HP&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.7&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 104.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220818191623, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 40384, moz:profile: C:\Users\HASSEN\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 122db000-312b-4e11-8b8f-bc9bc886f093
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 104.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220818191623, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 37784, moz:profile: C:\Users\HASSEN\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: aebbb8f0-2c1b-4219-afd1-becd8124c40b
 *** Element info: {Using=id, value=//a[text()=&apos;Logout&apos;]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -110,13 +110,13 @@ Session ID: 122db000-312b-4e11-8b8f-bc9bc886f093
 	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	... 19 more
-... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1440657298", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1440657298'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: //a[text()=&apos;Logout&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace537401261", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace537401261'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: //a[text()=&apos;Logout&apos;] (tried for 10 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at com.tmb.factories.ExplicitWaitFactory.preformExplicitWait(ExplicitWaitFactory.java:19)
-	at com.crmpro.pages.BasePage.click(BasePage.java:16)
-	at com.crmpro.pages.OrangeHRMHomePage.clickLogout(OrangeHRMHomePage.java:18)
+	at com.tmb.pages.BasePage.click(BasePage.java:20)
+	at com.tmb.pages.OrangeHRMHomePage.clickLogout(OrangeHRMHomePage.java:18)
 	at org.tmb.tests.OrangeHRMTests.loginLogoutTest(OrangeHRMTests.java:18)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -138,8 +138,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;HASSEN-HP&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.7&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 104.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220818191623, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 40384, moz:profile: C:\Users\HASSEN\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 122db000-312b-4e11-8b8f-bc9bc886f093
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 104.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220818191623, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 37784, moz:profile: C:\Users\HASSEN\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: aebbb8f0-2c1b-4219-afd1-becd8124c40b
 *** Element info: {Using=id, value=//a[text()=&apos;Logout&apos;]}
 	at jdk.internal.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -161,8 +161,8 @@ Session ID: 122db000-312b-4e11-8b8f-bc9bc886f093
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	... 19 more
 </pre></div></td>
-<td>19</td>
-<td>org.tmb.tests.OrangeHRMTests@5939a379</td></tr>
+<td>17</td>
+<td>org.tmb.tests.OrangeHRMTests@26275bef</td></tr>
 </table><p>
 </body>
 </html>
