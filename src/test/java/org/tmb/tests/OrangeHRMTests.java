@@ -5,7 +5,6 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.tmb.pages.OrangeHRMLoginPage;
-import com.tmb.reports.ExtentReport;
 
 public final class OrangeHRMTests extends BaseTest{
 	
@@ -14,8 +13,7 @@ public final class OrangeHRMTests extends BaseTest{
 	}
 	
     @Test(dataProvider="LoginTestDataProvider")	
-    public void loginLogoutTest(String username, String password) {
-    	ExtentReport.createTest("LoginLogout");
+    public void loginLogoutTest(String username, String password) {    	
     	
     	String title= new OrangeHRMLoginPage()
     			.enterUserName(username).enterPassword(password).clickLogin()

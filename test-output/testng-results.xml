@@ -2,24 +2,20 @@
 <testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-30T14:29:39 EDT" name="Suite" finished-at="2022-08-30T14:31:00 EDT" duration-ms="81369">
+  <suite started-at="2022-08-30T15:32:30 EDT" name="Suite" finished-at="2022-08-30T15:34:24 EDT" duration-ms="114159">
     <groups>
     </groups>
-    <test started-at="2022-08-30T14:29:39 EDT" name="Test" finished-at="2022-08-30T14:31:00 EDT" duration-ms="81369">
+    <test started-at="2022-08-30T15:32:30 EDT" name="Test" finished-at="2022-08-30T15:34:24 EDT" duration-ms="114159">
       <class name="org.tmb.tests.OrangeHRMTests">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:org.tmb.tests.OrangeHRMTests@73700b80]" started-at="2022-08-30T14:29:38 EDT" name="beforeSuite" finished-at="2022-08-30T14:29:39 EDT" duration-ms="977" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.tmb.tests.OrangeHRMTests@73700b80]" started-at="2022-08-30T14:29:39 EDT" name="setUp" finished-at="2022-08-30T14:30:37 EDT" duration-ms="57559" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.tmb.tests.OrangeHRMTests@696da30b]" started-at="2022-08-30T15:32:30 EDT" name="setUp" finished-at="2022-08-30T15:34:03 EDT" duration-ms="92670" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.tmb.tests.OrangeHRMTests@73700b80]" started-at="2022-08-30T14:29:39 EDT" name="setUp" finished-at="2022-08-30T14:30:34 EDT" duration-ms="54280" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.tmb.tests.OrangeHRMTests@696da30b]" started-at="2022-08-30T15:32:30 EDT" name="setUp" finished-at="2022-08-30T15:33:50 EDT" duration-ms="79961" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginLogoutTest(java.lang.String,java.lang.String)[pri:0, instance:org.tmb.tests.OrangeHRMTests@73700b80]" started-at="2022-08-30T14:30:34 EDT" name="loginLogoutTest" data-provider="LoginTestDataProvider" finished-at="2022-08-30T14:30:50 EDT" duration-ms="16451" status="FAIL">
+        <test-method signature="loginLogoutTest(java.lang.String,java.lang.String)[pri:0, instance:org.tmb.tests.OrangeHRMTests@696da30b]" started-at="2022-08-30T15:33:50 EDT" name="loginLogoutTest" data-provider="LoginTestDataProvider" finished-at="2022-08-30T15:34:19 EDT" duration-ms="29052" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -41,9 +37,9 @@
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 at com.tmb.factories.ExplicitWaitFactory.preformExplicitWait(ExplicitWaitFactory.java:19)
-at com.tmb.pages.BasePage.click(BasePage.java:20)
-at com.tmb.pages.OrangeHRMHomePage.clickLogout(OrangeHRMHomePage.java:20)
-at org.tmb.tests.OrangeHRMTests.loginLogoutTest(OrangeHRMTests.java:22)
+at com.tmb.pages.BasePage.click(BasePage.java:18)
+at com.tmb.pages.OrangeHRMHomePage.clickLogout(OrangeHRMHomePage.java:18)
+at org.tmb.tests.OrangeHRMTests.loginLogoutTest(OrangeHRMTests.java:21)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -64,8 +60,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'HASSEN-HP', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 104.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220818191623, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19992, moz:profile: C:\Users\HASSEN\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: cf2dbd09-ef48-4f02-8086-a63f69119b8c
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 104.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220818191623, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 35244, moz:profile: C:\Users\HASSEN\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 50939800-c961-483e-80da-3436921e3fcb
 *** Element info: {Using=id, value=//a[text()='Logout']}
 at jdk.internal.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -92,7 +88,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginLogoutTest -->
-        <test-method signature="loginLogoutTest(java.lang.String,java.lang.String)[pri:0, instance:org.tmb.tests.OrangeHRMTests@73700b80]" started-at="2022-08-30T14:30:37 EDT" name="loginLogoutTest" data-provider="LoginTestDataProvider" finished-at="2022-08-30T14:30:52 EDT" duration-ms="14760" status="FAIL">
+        <test-method signature="loginLogoutTest(java.lang.String,java.lang.String)[pri:0, instance:org.tmb.tests.OrangeHRMTests@696da30b]" started-at="2022-08-30T15:34:03 EDT" name="loginLogoutTest" data-provider="LoginTestDataProvider" finished-at="2022-08-30T15:34:22 EDT" duration-ms="19141" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -114,9 +110,9 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 at com.tmb.factories.ExplicitWaitFactory.preformExplicitWait(ExplicitWaitFactory.java:19)
-at com.tmb.pages.BasePage.click(BasePage.java:20)
-at com.tmb.pages.OrangeHRMHomePage.clickLogout(OrangeHRMHomePage.java:20)
-at org.tmb.tests.OrangeHRMTests.loginLogoutTest(OrangeHRMTests.java:22)
+at com.tmb.pages.BasePage.click(BasePage.java:18)
+at com.tmb.pages.OrangeHRMHomePage.clickLogout(OrangeHRMHomePage.java:18)
+at org.tmb.tests.OrangeHRMTests.loginLogoutTest(OrangeHRMTests.java:21)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -137,8 +133,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'HASSEN-HP', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 104.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220818191623, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 38728, moz:profile: C:\Users\HASSEN\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b03f3bcf-234a-4553-a62a-d95cf8257a4f
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 104.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220818191623, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 39452, moz:profile: C:\Users\HASSEN\AppData\Loc..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 69100152-32b9-4a58-bcb2-b292600bc85d
 *** Element info: {Using=id, value=//a[text()='Logout']}
 at jdk.internal.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -165,53 +161,28 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginLogoutTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.tmb.tests.OrangeHRMTests@73700b80]" started-at="2022-08-30T14:30:50 EDT" name="tearDown" finished-at="2022-08-30T14:31:00 EDT" duration-ms="10436" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.tmb.tests.OrangeHRMTests@696da30b]" started-at="2022-08-30T15:34:19 EDT" name="tearDown" finished-at="2022-08-30T15:34:22 EDT" duration-ms="2710" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginLogoutTest status=FAILURE method=OrangeHRMTests.loginLogoutTest(java.lang.String,java.lang.String)[pri:0, instance:org.tmb.tests.OrangeHRMTests@696da30b] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.tmb.tests.OrangeHRMTests@73700b80]" started-at="2022-08-30T14:30:52 EDT" name="tearDown" finished-at="2022-08-30T14:31:00 EDT" duration-ms="8729" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.tmb.tests.OrangeHRMTests@696da30b]" started-at="2022-08-30T15:34:22 EDT" name="tearDown" finished-at="2022-08-30T15:34:24 EDT" duration-ms="2258" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginLogoutTest status=FAILURE method=OrangeHRMTests.loginLogoutTest(java.lang.String,java.lang.String)[pri:0, instance:org.tmb.tests.OrangeHRMTests@696da30b] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:org.tmb.tests.OrangeHRMTests@73700b80]" started-at="2022-08-30T14:31:00 EDT" name="afterSuite" finished-at="2022-08-30T14:31:01 EDT" duration-ms="626" status="FAIL">
-          <exception class="java.io.IOException">
-            <message>
-              <![CDATA[Failed to open file:/C:/Users/HASSEN/workspace/SeleniumAutomation/index.hmtl. Error message: The system cannot find the file specified.
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.io.IOException: Failed to open file:/C:/Users/HASSEN/workspace/SeleniumAutomation/index.hmtl. Error message: The system cannot find the file specified.
-
-at java.desktop/sun.awt.windows.WDesktopPeer.ShellExecute(WDesktopPeer.java:115)
-at java.desktop/sun.awt.windows.WDesktopPeer.browse(WDesktopPeer.java:101)
-at java.desktop/java.awt.Desktop.browse(Desktop.java:526)
-at com.tmb.reports.ExtentReport.flushReports(ExtentReport.java:45)
-at org.tmb.tests.BaseTest.afterSuite(BaseTest.java:26)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:344)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.io.IOException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
       </class> <!-- org.tmb.tests.OrangeHRMTests -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

@@ -3,7 +3,6 @@ package com.tmb.pages;
 import org.openqa.selenium.By;
 
 import com.tmb.enums.WaitStrategy;
-import com.tmb.reports.ExtentManager;
 
 public final class OrangeHRMHomePage extends BasePage{
 		
@@ -11,14 +10,12 @@ public final class OrangeHRMHomePage extends BasePage{
 	private final By linkLogout=By.id("//a[text()='Logout']");
 	
 	public OrangeHRMHomePage clickDropDown() {
-		click(linkDropDown, WaitStrategy.PRESENCE);
-		ExtentManager.getExtentTest().pass("clickDropDown clicked");
+		click(linkDropDown, WaitStrategy.PRESENCE, "clickDropDown ");
 		return this;
 	}
 	
 	public OrangeHRMLoginPage clickLogout() {		
-		click(linkLogout, WaitStrategy.CLICKABLE);
-		ExtentManager.getExtentTest().pass("Logout button clicked");
+		click(linkLogout, WaitStrategy.CLICKABLE, "Logout button");
 		return new OrangeHRMLoginPage();
 	}
 	//Uninterruptibles.sleepUninterruptibly(3,  TimeUnit.SECONDS);

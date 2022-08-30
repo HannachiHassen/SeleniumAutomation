@@ -3,7 +3,7 @@ package com.tmb.pages;
 import org.openqa.selenium.By;
 
 import com.tmb.enums.WaitStrategy;
-import com.tmb.reports.ExtentManager;
+
 
 public final class OrangeHRMLoginPage extends BasePage{
 	/*
@@ -16,17 +16,16 @@ public final class OrangeHRMLoginPage extends BasePage{
 	private final By buttonLogin =By.xpath("//button[@type='submit']");
 	
 	public OrangeHRMLoginPage enterUserName(String username) {
-		sendKeys(textboxUsername, WaitStrategy.PRESENCE, username);
+		sendKeys(textboxUsername, WaitStrategy.PRESENCE, username, "Username");
 		return this;
 	}
 	
 	public OrangeHRMLoginPage enterPassword(String password) {
-		sendKeys(textboxPassword, WaitStrategy.PRESENCE, password);
+		sendKeys(textboxPassword, WaitStrategy.PRESENCE, password, "Password");
 		return this;
 	}
 	public OrangeHRMHomePage clickLogin() {
-		click(buttonLogin, WaitStrategy.CLICKABLE);
-		ExtentManager.getExtentTest().pass("Login button clicked");
+		click(buttonLogin, WaitStrategy.CLICKABLE, "Login Button");		
 		return new OrangeHRMHomePage();
 	}
 	
