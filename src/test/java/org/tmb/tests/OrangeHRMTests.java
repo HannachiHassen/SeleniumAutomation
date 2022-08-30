@@ -1,6 +1,7 @@
 package org.tmb.tests;
 
 import org.assertj.core.api.Assertions;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.tmb.pages.OrangeHRMLoginPage;
@@ -11,7 +12,7 @@ public final class OrangeHRMTests extends BaseTest{
 		
 	}
 	
-    @Test	
+    @Test(dataProvider="LoginTestDataProvider")	
     public void loginLogoutTest() {
     	String title= new OrangeHRMLoginPage()
     			.enterUserName("Admin").enterPassword("admin123").clickLogin()
@@ -21,4 +22,14 @@ public final class OrangeHRMTests extends BaseTest{
     	Assertions.assertThat(title)
     	.isEqualTo("OrangeHRM");
 	}
+    
+    @DataProvider(name="LoginTestDataProvider", parallel = true)
+    public Object[][] getData() {
+    	return new Object[][] {
+			{"Admin","admin123"},
+			{"Admin123","admin1234"}	,
+			{"Admin","admin123"},
+			{"Admin123","admin1234"}
+		};    	
+    }
 }
