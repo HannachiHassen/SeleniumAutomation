@@ -3,6 +3,7 @@ package com.tmb.pages;
 import org.openqa.selenium.By;
 
 import com.tmb.enums.WaitStrategy;
+import com.tmb.reports.ExtentManager;
 
 public final class OrangeHRMLoginPage extends BasePage{
 	/*
@@ -25,6 +26,7 @@ public final class OrangeHRMLoginPage extends BasePage{
 	}
 	public OrangeHRMHomePage clickLogin() {
 		click(buttonLogin, WaitStrategy.CLICKABLE);
+		ExtentManager.getExtentTest().pass("Login button clicked");
 		return new OrangeHRMHomePage();
 	}
 	
