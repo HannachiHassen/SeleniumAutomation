@@ -31,8 +31,8 @@ public final class FrameworkConstants {
 			return extentReportFilePath=createReportPath();
 		}
 		return extentReportFilePath;
-	}
-	
+	}	
+
 	private static String createReportPath() throws Exception {
 		if (PropertyUtlis.get(ConfigProperties.OVERRIDEREPORTS).equals("no")) {
 			return EXTENTREPORTFOLDERPATH + System.currentTimeMillis()+ "/index.html";
@@ -64,5 +64,13 @@ public final class FrameworkConstants {
 	
 	public static String getExcelfilepath() {
 		return EXCELFILEPATH;
+	}
+	
+	public static String getRunmangersheet() {
+		return RUNMANGERSHEET;
+	}
+
+	public static String getIterationdatasheet() {
+		return ITERATIONDATASHEET;
 	}
 }
