@@ -8,7 +8,7 @@ public final class ExtentManager {
 		
 	}
 	
-	private static ThreadLocal<ExtentTest> extTest= new ThreadLocal<ExtentTest>();
+	private static ThreadLocal<ExtentTest> extTest= new ThreadLocal<>();
 
 	static ExtentTest getExtentTest() {  //deafult --> it can be only accessed within the package--> private packages
 		return extTest.get();
