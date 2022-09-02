@@ -15,7 +15,7 @@ public final class FrameworkConstants {
     private static final String RESOURCESPATH= System.getProperty("user.dir") +"/src/test/resources/";
     
 	private static final String CHROMEDRIVERPATH= RESOURCESPATH + "/executables/chromedriver.exe";
-	private static final String FIREFOXDRIVERPATH= RESOURCESPATH + "/executables/geckodriver.exe";
+	private static final String GECKODRIVERPATH= RESOURCESPATH + "/executables/geckodriver.exe";
 	private static final String CONFIGFILEPATH= RESOURCESPATH + "/config/config.properties";
 	private static final String JSONCONFIGFILEPATH= RESOURCESPATH + "/jsons/config.json";
 	private static final String EXCELFILEPATH= RESOURCESPATH + "/excel/testdata.xlsx";
@@ -54,8 +54,8 @@ public final class FrameworkConstants {
 		return CHROMEDRIVERPATH;
 	}	
 
-	public static String getFirefoxdriverpath() {
-		return FIREFOXDRIVERPATH;
+	public static String getGeckodriverpath() {
+		return GECKODRIVERPATH ;
 	}
 
 	public static String getJsonconfigfilepath() {

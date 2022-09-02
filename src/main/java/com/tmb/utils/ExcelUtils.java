@@ -20,20 +20,20 @@ public class ExcelUtils {
 		
 	}
 	//try with resources
-	public static List<Map<String, String>> getTestDetails(String sheetname) {		
-		FileInputStream fs = null;
-		XSSFWorkbook workbook;
+	public static List<Map<String, String>> getTestDetails(String sheetname) {
 		List<Map<String,String>> list = null;
+		FileInputStream fs = null;
 		try {
 			fs = new FileInputStream(FrameworkConstants.getExcelfilepath());
-			workbook= new XSSFWorkbook(fs);
+			XSSFWorkbook workbook = new XSSFWorkbook(fs);
 			XSSFSheet sheet =workbook.getSheet(sheetname);			
 					
-			int lastrownum=sheet.getLastRowNum();
-			int lastcolnum=sheet.getRow(0).getLastCellNum();
+			int lastrownum = sheet.getLastRowNum();
+			int lastcolnum = sheet.getRow(0).getLastCellNum();
 			
 			Map<String,String> datamap = null;
 			list = new ArrayList<>();
+			
 			for(int i=1;i<=lastrownum;i++) {
 				datamap = new HashMap<>();
 				for(int j=0; j<lastcolnum;j++) {
@@ -48,7 +48,7 @@ public class ExcelUtils {
 			e1.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
+		}		
 		finally {
 			try {
 				if (Objects.nonNull(fs)) {
@@ -58,6 +58,7 @@ public class ExcelUtils {
 				e.printStackTrace();
 			}
 		}
-		return list;					
+		System.out.println(list);
+		return list;
 	}
 }

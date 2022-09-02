@@ -14,7 +14,11 @@ import com.tmb.constans.FrameworkConstants;
 
 public class DataProviderWithExcel {
 	
-	//@Test(dataProvider="getData")
+	private DataProviderWithExcel() {
+
+	}
+	
+	@Test(dataProvider="getData")
 	public void testWithExcel(String username,String password , String fname, String lname) {
 		System.out.println(username);
 	}
@@ -22,7 +26,7 @@ public class DataProviderWithExcel {
 	@DataProvider
 	public Object[][] getData() throws IOException {
 		
-		FileInputStream fs = new FileInputStream(System.getProperty("user.dir")+"/excel/testdata.xlsx");
+		FileInputStream fs = new FileInputStream(FrameworkConstants.getExcelfilepath());
 		XSSFWorkbook wb = new XSSFWorkbook(fs);
 		XSSFSheet sheet = wb.getSheetAt(0);
 		
@@ -39,12 +43,7 @@ public class DataProviderWithExcel {
 		return data;
 	}
 	
-	private DataProviderWithExcel() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	@Test(dataProvider="getDataWithTable")
+	//@Test(dataProvider="getDataWithTable")
 	public void testWithExcelAndTable(Map<String,String> data) {
 		System.out.println(data.get("username"));
 	}

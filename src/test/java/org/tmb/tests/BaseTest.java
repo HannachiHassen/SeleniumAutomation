@@ -1,6 +1,7 @@
 package org.tmb.tests;
 
-import org.testng.ITestResult;
+import java.util.Map;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -11,14 +12,16 @@ public class BaseTest {
 	protected BaseTest() {
 		
 	}
-			
+	
+	@SuppressWarnings("unchecked")
 	@BeforeMethod
-	protected void setUp() throws Exception {		
-		Driver.initDriver();
+	protected void setUp(Object[] data) throws Exception { //Map<String,String>
+		Map<String,String> map = (Map<String,String>)data[0];
+		Driver.initDriver(map.get("browser"));
 	}
 	
 	@AfterMethod
-	protected void tearDown(ITestResult result) {		
+	protected void tearDown() {		
 		Driver.quitDriver();
 	}
 }

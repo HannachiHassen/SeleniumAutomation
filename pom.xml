@@ -23,7 +23,13 @@
       <artifactId>testng</artifactId>
       <version>7.4.0</version>
     </dependency>
-	<!-- https://mvnrepository.com/artifact// -->   
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+    <dependency>
+	  <groupId>org.apache.commons</groupId>
+	  <artifactId>commons-lang3</artifactId>
+	  <version>3.9</version>
+	</dependency>
+    <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->   
 	<dependency>
 	  <groupId>com.aventstack</groupId>
 	  <artifactId>extentreports</artifactId>
@@ -47,12 +53,32 @@
       <artifactId>assertj-joda-time</artifactId>
       <version>2.2.0</version>
     </dependency>
+     <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>5.2.2</version>
+    </dependency>
     <!-- https://mvnrepository.com/artifact// -->
     <dependency>
       <groupId>org.apache.poi</groupId>
       <artifactId>poi-ooxml</artifactId>
       <version>5.2.2</version>
     </dependency>
+     <!-- https://mvnrepository.com/artifact// -->
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml-schemas</artifactId>
+      <version>4.1.2</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact// -->
+    <dependency>
+     <groupId>org.apache.poi</groupId>
+     <artifactId>poi-scratchpad</artifactId>
+     <version>4.1.2</version>
+    </dependency>
+    
+    
     <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
     <dependency>
    	  <groupId>com.fasterxml.jackson.core</groupId>
