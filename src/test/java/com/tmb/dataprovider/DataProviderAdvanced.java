@@ -13,6 +13,8 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.tmb.constans.FrameworkConstants;
+
 public class DataProviderAdvanced {
 	public static List<Map<String,String>> smalllist= new ArrayList<>();
 	
@@ -44,7 +46,7 @@ public class DataProviderAdvanced {
 	}
 	
 	private static List<Map<String, String>> readExcelAndStoreInMap() throws IOException  {
-		FileInputStream fs =new FileInputStream(System.getProperty("user.dir")+"/excel/testdata.xlsx");
+		FileInputStream fs =new FileInputStream(FrameworkConstants.getExcelfilepath());
 		XSSFWorkbook workbook= new XSSFWorkbook(fs);
 		XSSFSheet sheet =workbook.getSheet("Sheet1");
 		String sheetname = "Sheet1";

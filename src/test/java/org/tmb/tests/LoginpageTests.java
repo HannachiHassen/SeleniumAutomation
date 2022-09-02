@@ -1,19 +1,38 @@
 package org.tmb.tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
+import java.util.Map;
+
+import org.assertj.core.api.Assertions;
+
 import org.testng.annotations.Test;
+import com.tmb.pages.OrangeHRMLoginPage;
+import com.tmb.utils.DataProviderUtils;
 
-import com.tmb.driver.DriverManager;
+public final class LoginpageTests extends BaseTest {
 
-public final class LoginpageTests extends BaseTest{	
-	
 	private LoginpageTests() {
-		
+
 	}
-	
-	@Test
-	public void test1() {
-		DriverManager.getDriver().findElement(By.name("q")).sendKeys("Automation", Keys.ENTER) ;	
-	}	
+
+	@Test(dataProvider = "getData", dataProviderClass = DataProviderUtils.class)
+	public void loginLogoutTest(Map<String, String> data) {
+
+		String title = new OrangeHRMLoginPage()
+				.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin()
+				.clickDropDown().clickLogout()
+				.getTitle();
+
+		Assertions.assertThat(title).isEqualTo("OrangeHRM");
+	}
+
+	@Test(dataProvider = "getData", dataProviderClass = DataProviderUtils.class)
+	public void newTest(Map<String, String> data) {
+
+		String title = new OrangeHRMLoginPage()
+				.enterUserName(data.get("username")).enterPassword(data.get("password")).clickLogin()
+				.clickDropDown().clickLogout()
+				.getTitle();
+
+		Assertions.assertThat(title).isEqualTo("OrangeHRM");
+	}
 }

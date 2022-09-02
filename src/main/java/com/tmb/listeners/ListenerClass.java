@@ -1,6 +1,7 @@
 package com.tmb.listeners;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
@@ -15,7 +16,11 @@ public final class ListenerClass implements ITestListener, ISuiteListener{
 
 	@Override
 	public void onStart(ISuite suite) {
-		ExtentReport.initReports();
+		try {
+			ExtentReport.initReports();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		System.out.println("before suite in listener");
 	}
 
@@ -24,6 +29,8 @@ public final class ListenerClass implements ITestListener, ISuiteListener{
 		try {
 			ExtentReport.flushReports();
 		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		System.out.println("after suite in listener");
@@ -43,7 +50,14 @@ public final class ListenerClass implements ITestListener, ISuiteListener{
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		ExtentLogger.fail(result.getMethod().getMethodName() + " is Failed");
+	
+		try {
+			ExtentLogger.fail(result.getMethod().getMethodName() + " is Failed", true);
+			ExtentLogger.fail(result.getThrowable().toString());
+			ExtentLogger.fail(Arrays.toString(result.getThrowable().getStackTrace()));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		System.out.println("after method in listener : fail and I am attaching screenshots here");
 	}
 

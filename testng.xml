@@ -6,7 +6,7 @@
  </listeners>
   <test thread-count="1" name="Test" parallel="methods">
     <classes>
-      <class name="org.tmb.tests.OrangeHRMTests"/>
+      <class name="org.tmb.tests.LoginpageTests"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

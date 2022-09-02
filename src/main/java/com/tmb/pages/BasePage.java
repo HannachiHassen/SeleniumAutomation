@@ -17,13 +17,21 @@ public class BasePage {
 	protected void click(By by, WaitStrategy waitstrategy, String elementname) {
 		WebElement element= ExplicitWaitFactory.preformExplicitWait(by, waitstrategy);
 		element.click();		
-		ExtentLogger.pass(elementname + " is clicked");
+		try {
+			ExtentLogger.pass(elementname + " is clicked", true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	protected void sendKeys(By by, WaitStrategy waitstrategy, String value, String elementname) {
 		
 		WebElement element= ExplicitWaitFactory.preformExplicitWait(by, waitstrategy);
 		element.sendKeys(value);
-		ExtentLogger.pass(value + " is entered successfully in "+ elementname);
+		try {
+			ExtentLogger.pass(value + " is entered successfully in "+ elementname, true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}	
 }

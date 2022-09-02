@@ -7,7 +7,7 @@ import com.tmb.enums.WaitStrategy;
 public final class OrangeHRMHomePage extends BasePage{
 		
 	private final By linkDropDown=By.xpath("//p[@class='oxd-userdropdown-name']");
-	private final By linkLogout=By.id("//a[text()='Logout']");
+	private final By linkLogout=By.xpath("//a[contains(text(),'Logout')]");
 	
 	public OrangeHRMHomePage clickDropDown() {
 		click(linkDropDown, WaitStrategy.PRESENCE, "clickDropDown ");
