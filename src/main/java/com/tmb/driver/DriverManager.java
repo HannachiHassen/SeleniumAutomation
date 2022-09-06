@@ -3,23 +3,23 @@ package com.tmb.driver;
 import org.openqa.selenium.WebDriver;
 
 public final class DriverManager {
-	
+
 	// priavte, protected, public --> default	
 	private  DriverManager() {
-		
+
 	}
-	
-	private static ThreadLocal<WebDriver> dr= new ThreadLocal<>();
+
+	private static ThreadLocal<WebDriver> dr=new ThreadLocal<>();
 
 	public static WebDriver getDriver() {
 		return dr.get();
 	}
-	
+
 	public static void setDriver(WebDriver driverref) {
 		dr.set(driverref);
 	}
-	
+
 	public static void unload() {
-		dr.remove();
-	}
+		dr.remove(); 
+	}	
 }

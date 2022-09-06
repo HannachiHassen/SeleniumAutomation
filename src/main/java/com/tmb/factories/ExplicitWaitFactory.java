@@ -10,22 +10,31 @@ import com.tmb.driver.DriverManager;
 import com.tmb.enums.WaitStrategy;
 
 public class ExplicitWaitFactory {
+	
+    private ExplicitWaitFactory() {
+		
+	}
 
 	public static WebElement preformExplicitWait(By by, WaitStrategy waitstrategy) {
 		WebElement element=null;
 
 		if (waitstrategy == WaitStrategy.CLICKABLE) {
-			element= new WebDriverWait(DriverManager.getDriver(), FrameworkConstants.getExplicitwait())
+			element= new WebDriverWait(DriverManager.getDriver(), FrameworkConstants.getExplicitWait())
 			.until(ExpectedConditions.elementToBeClickable(by));
-		} else if (waitstrategy == WaitStrategy.PRESENCE) {
-			element= new WebDriverWait(DriverManager.getDriver(), FrameworkConstants.getExplicitwait())
+		} 
+		else if (waitstrategy == WaitStrategy.PRESENCE) {
+			element= new WebDriverWait(DriverManager.getDriver(), FrameworkConstants.getExplicitWait())
 			.until(ExpectedConditions.presenceOfElementLocated(by));
-		}else if (waitstrategy == WaitStrategy.VISIBLE) {
-			element= new WebDriverWait(DriverManager.getDriver(), FrameworkConstants.getExplicitwait())
+		}
+		else if (waitstrategy == WaitStrategy.VISIBLE) {
+			element= new WebDriverWait(DriverManager.getDriver(), FrameworkConstants.getExplicitWait())
 			.until(ExpectedConditions.visibilityOfElementLocated(by));
-		}else if (waitstrategy == WaitStrategy.NONE) {
+		}
+		else if (waitstrategy == WaitStrategy.NONE) {
 			element= DriverManager.getDriver().findElement(by);
 		}
 		return element;
 	}
+
+	
 }

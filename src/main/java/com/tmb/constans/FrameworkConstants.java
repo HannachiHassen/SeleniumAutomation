@@ -19,6 +19,7 @@ public final class FrameworkConstants {
 	private static final String CONFIGFILEPATH= RESOURCESPATH + "/config/config.properties";
 	private static final String JSONCONFIGFILEPATH= RESOURCESPATH + "/jsons/config.json";
 	private static final String EXCELFILEPATH= RESOURCESPATH + "/excel/testdata.xlsx";
+	
 	private static final String RUNMANGERSHEET = "RUNMANAGER";
 	private static final String ITERATIONDATASHEET = "DATA";
 	
@@ -42,35 +43,35 @@ public final class FrameworkConstants {
 		}
 	}
 		
-	public static int getExplicitwait() {
+	public static int getExplicitWait() {
 		return EXPLICITWAIT;
 	}
 	
-	public static String getConfigfilepath() {
+	public static String getConfigFilePath() {
 		return CONFIGFILEPATH;
 	}
 
-	public static String getChromeDriverpath() {
+	public static String getChromeDriverPath() {
 		return CHROMEDRIVERPATH;
 	}	
 
-	public static String getGeckodriverpath() {
+	public static String getGeckoDriverPath() {
 		return GECKODRIVERPATH ;
 	}
 
-	public static String getJsonconfigfilepath() {
+	public static String getJsonConfigFilePath() {
 		return JSONCONFIGFILEPATH;
 	}
 	
-	public static String getExcelfilepath() {
+	public static String getExcelFilePath() {
 		return EXCELFILEPATH;
 	}
 	
-	public static String getRunmangersheet() {
+	public static String getRunmangerDatasheet() {
 		return RUNMANGERSHEET;
 	}
 
-	public static String getIterationdatasheet() {
+	public static String getIterationDatasheet() {
 		return ITERATIONDATASHEET;
 	}
 }

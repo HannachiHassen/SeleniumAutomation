@@ -26,7 +26,7 @@ public class DataProviderWithExcel {
 	@DataProvider
 	public Object[][] getData() throws IOException {
 		
-		FileInputStream fs = new FileInputStream(FrameworkConstants.getExcelfilepath());
+		FileInputStream fs = new FileInputStream(FrameworkConstants.getExcelFilePath());
 		XSSFWorkbook wb = new XSSFWorkbook(fs);
 		XSSFSheet sheet = wb.getSheetAt(0);
 		
@@ -51,7 +51,7 @@ public class DataProviderWithExcel {
 	@DataProvider(parallel = true)
 	public Object[] getDataWithTable() throws IOException {
 		
-		FileInputStream fs = new FileInputStream(FrameworkConstants.getExcelfilepath());
+		FileInputStream fs = new FileInputStream(FrameworkConstants.getExcelFilePath());
 		XSSFWorkbook wb = new XSSFWorkbook(fs);
 		XSSFSheet sheet = wb.getSheetAt(0);
 		

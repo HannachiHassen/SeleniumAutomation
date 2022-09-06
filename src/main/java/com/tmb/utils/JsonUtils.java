@@ -21,7 +21,7 @@ public final class JsonUtils {
 	static {
 		try {
 			CONFIGMAP= new ObjectMapper()
-					.readValue(new File(FrameworkConstants.getJsonconfigfilepath()), new TypeReference<HashMap<String, String>>() {});
+					.readValue(new File(FrameworkConstants.getJsonConfigFilePath()), new TypeReference<HashMap<String, String>>() {});
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

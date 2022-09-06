@@ -19,15 +19,15 @@ public final class Driver {
 	public static void initDriver(String browser) throws Exception {
 		if(Objects.isNull(DriverManager.getDriver())) {
 			if (browser.equalsIgnoreCase("firefox")) {
-				System.setProperty("webdriver.gecko.driver", FrameworkConstants.getGeckodriverpath());
+				System.setProperty("webdriver.gecko.driver", FrameworkConstants.getGeckoDriverPath());
 				DriverManager.setDriver(new FirefoxDriver());
 			}
 			else if (browser.equalsIgnoreCase("chrome")) {
-				System.setProperty("webdriver.chrome.driver", FrameworkConstants.getChromeDriverpath());
+				System.setProperty("webdriver.chrome.driver", FrameworkConstants.getChromeDriverPath());
 				DriverManager.setDriver(new ChromeDriver());
 			}
 		    else if (browser.equalsIgnoreCase("edge")) {
-			System.setProperty("webdriver.edge.driver", FrameworkConstants.getChromeDriverpath());
+			System.setProperty("webdriver.edge.driver", FrameworkConstants.getChromeDriverPath());
 			DriverManager.setDriver(new EdgeDriver());
 		    }
 			DriverManager.getDriver().get(PropertyUtlis.get(ConfigProperties.URL));

@@ -46,7 +46,7 @@ public class DataProviderAdvanced {
 	}
 	
 	private static List<Map<String, String>> readExcelAndStoreInMap() throws IOException  {
-		FileInputStream fs =new FileInputStream(FrameworkConstants.getExcelfilepath());
+		FileInputStream fs =new FileInputStream(FrameworkConstants.getExcelFilePath());
 		XSSFWorkbook workbook= new XSSFWorkbook(fs);
 		XSSFSheet sheet =workbook.getSheet("Sheet1");
 		String sheetname = "Sheet1";

@@ -24,7 +24,7 @@ public class SimpleTest {
 	@Test
 	public void verifyTest() throws Exception {
 
-		System.setProperty("webdriver.gecko.driver", FrameworkConstants.getGeckodriverpath());
+		System.setProperty("webdriver.gecko.driver", FrameworkConstants.getGeckoDriverPath());
 		
 		DriverManager.setDriver(new FirefoxDriver());
 		DriverManager.getDriver().get(PropertyUtlis.get(ConfigProperties.URL));

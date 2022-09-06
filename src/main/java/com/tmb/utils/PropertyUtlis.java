@@ -21,7 +21,7 @@ public final class PropertyUtlis {
 
 	static {
 		try {
-			FileInputStream file = new FileInputStream(FrameworkConstants.getConfigfilepath());
+			FileInputStream file = new FileInputStream(FrameworkConstants.getConfigFilePath());
 			property.load(file);
 			
 			for (Map.Entry<Object, Object> entry : property.entrySet()) {
@@ -41,7 +41,7 @@ public final class PropertyUtlis {
 	// Converting a property to hashmap needs some time	
 	public static String get(ConfigProperties key) throws Exception {
 		if (Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key.name().toLowerCase()))) {
-			throw new Exception("Property name "+ key +" is not fournd. Please check config.properties");
+			throw new Exception("Property name "+ key +" is not found. Please check config.properties");
 		}
 		return CONFIGMAP.get(key.name().toLowerCase());
 	}
