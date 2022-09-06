@@ -9,6 +9,7 @@
   <test thread-count="1" name="Test" parallel="methods">
     <classes>
       <class name="org.tmb.tests.LoginpageTests"/>
+      <class name="org.tmb.tests.AmazonDemoTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

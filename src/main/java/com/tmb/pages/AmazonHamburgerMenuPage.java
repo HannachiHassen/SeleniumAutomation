@@ -9,14 +9,24 @@ import com.tmb.utils.DynamicXpathUtils;
 
 public final class AmazonHamburgerMenuPage extends BasePage {
 	
-	private String linkSubMenu= "//a[text()='%replaceable%']";
+	private String linkComputers= "//div[text()='Mobiles, Computers']/parent::a";
+	private String linkSubMenu= "//a[text()='%s']";
+	private  String linkSubMenu2 = "//div[text()='%s']/parent::a[text()='%s']";
 	
 	public AmazonHamburgerMenuPage() {
 		PageFactory.initElements(DriverManager.getDriver(), this);
 	}
 	
-	public void clickOnSubMenuItem(String menutext) {
+	public AmazonHamburgerMenuPage clickComputer() {
+		click(By.xpath(linkComputers), WaitStrategy.CLICKABLE, "Mobiles and Computers");
+		return this;
+	}
+	public AmazonLaptopPage clickOnSubMenuItem(String menutext) {
 		String newxpath=DynamicXpathUtils.getXpath(linkSubMenu, menutext);
 		click(By.xpath(newxpath), WaitStrategy.CLICKABLE, menutext);
+		if (menutext.contains("Laptops")) {
+			return new AmazonLaptopPage();
+		}
+		return null;
 	}
 }
