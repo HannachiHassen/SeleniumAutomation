@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -23,9 +22,9 @@ public final class ExcelUtils {
 	//try with resources
 	public static List<Map<String, String>> getTestDetails(String sheetname) {
 		List<Map<String,String>> list = null;
-		FileInputStream fs = null;
-		try {
-			fs = new FileInputStream(FrameworkConstants.getExcelFilePath());
+		
+		try (FileInputStream fs = new FileInputStream(FrameworkConstants.getExcelFilePath())){
+			
 			XSSFWorkbook workbook = new XSSFWorkbook(fs);
 			XSSFSheet sheet =workbook.getSheet(sheetname);			
 					
@@ -53,15 +52,6 @@ public final class ExcelUtils {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}		
-		finally {
-			try {
-				if (Objects.nonNull(fs)) {
-					fs.close();
-				}				
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
 		System.out.println(list);
 		return list;
 	}

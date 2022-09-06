@@ -1,5 +1,6 @@
 package com.tmb.utils;
 
+import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
@@ -20,16 +21,14 @@ public final class PropertyUtlis {
 	private static final Map<String, String> CONFIGMAP= new HashMap<>();
 
 	static {
-		try {
-			FileInputStream file = new FileInputStream(FrameworkConstants.getConfigFilePath());
+		//try with resources
+		try (FileInputStream file = new FileInputStream(FrameworkConstants.getConfigFilePath()); BufferedInputStream bfis=new BufferedInputStream(file)){
 			property.load(file);
 			
 			for (Map.Entry<Object, Object> entry : property.entrySet()) {
 				CONFIGMAP.put(String.valueOf(entry.getKey()), String.valueOf(entry.getValue()).trim()); //remove the trailing and leading spaces		
 			}
-			
 			//property.entrySet().forEach(entry ->CONFIGMAP.put(String.valueOf(entry.getKey()), String.valueOf(entry.getValue()));
-			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (Exception e) {
