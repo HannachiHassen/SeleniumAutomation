@@ -42,6 +42,7 @@ public final class ListenerClass implements ITestListener, ISuiteListener{
 		ExtentReport.createTest(result.getMethod().getMethodName());
 		ExtentReport.addAuthors(result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FrameworkAnnotation.class).author());
 		ExtentReport.addCategories(result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FrameworkAnnotation.class).category());
+		ExtentReport.addDevices(result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FrameworkAnnotation.class).device());
 		System.out.println("before method in listener");
 	}
 
