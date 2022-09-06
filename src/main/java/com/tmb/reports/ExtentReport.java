@@ -10,6 +10,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Protocol;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.tmb.constans.FrameworkConstants;
+import com.tmb.enums.CategoryType;
 
 public final class ExtentReport {
 
@@ -57,9 +58,9 @@ public final class ExtentReport {
 		}		
 	}
 	
-    public static void addCategories(String[] categories) {
-    	for (String temp:categories) {
-			ExtentManager.getExtentTest().assignCategory(temp);
+    public static void addCategories(CategoryType[] categories) {
+    	for (CategoryType temp:categories) {
+			ExtentManager.getExtentTest().assignCategory(temp.toString());
 		}
 	}
 }
