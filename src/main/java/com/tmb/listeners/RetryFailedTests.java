@@ -13,15 +13,11 @@ public class RetryFailedTests implements IRetryAnalyzer{
 	@Override
 	public boolean retry(ITestResult result) {
 		boolean value=false;
-		try {
 			if (PropertyUtlis.get(ConfigProperties.RETRYFAILEDTESTS).equalsIgnoreCase("yes")) {
 				value=counter<retryLimint;		
 				counter++;
 				System.out.println("Retrying " + result.getName() + " again and the count is " + (counter+1));
 			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 		return value;		
 	}
 }

@@ -3,6 +3,7 @@ package com.tmb.pages;
 import org.openqa.selenium.By;
 
 import com.tmb.enums.WaitStrategy;
+import com.tmb.utils.DecodeUtils;
 
 
 public final class OrangeHRMLoginPage extends BasePage{
@@ -21,9 +22,10 @@ public final class OrangeHRMLoginPage extends BasePage{
 	}
 	
 	public OrangeHRMLoginPage enterPassword(String password) {
-		sendKeys(textboxPassword, WaitStrategy.PRESENCE, password, "Password");
+		sendKeys(textboxPassword, WaitStrategy.PRESENCE, DecodeUtils.getDecodedString(password), "Password");
 		return this;
 	}
+	
 	public OrangeHRMHomePage clickLogin() {
 		click(buttonLogin, WaitStrategy.CLICKABLE, "Login Button");		
 		return new OrangeHRMHomePage();
