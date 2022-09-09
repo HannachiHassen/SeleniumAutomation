@@ -10,6 +10,8 @@ import java.util.Properties;
 
 import com.tmb.constans.FrameworkConstants;
 import com.tmb.enums.ConfigProperties;
+import com.tmb.exceptions.FrameworkException;
+import com.tmb.exceptions.PropertyFileException;
 
 public final class PropertyUtlis {
 
@@ -32,24 +34,24 @@ public final class PropertyUtlis {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (Exception e) {
-			e.printStackTrace();
+			throw new FrameworkException("Some IO Exception happened while reading Property File.");
 		}			
 	}
 	
 	// Hashmap ---read everything from properties file
 	// Converting a property to hashmap needs some time	
-	public static String get(ConfigProperties key) throws Exception {
+	public static String get(ConfigProperties key) {
 		if (Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key.name().toLowerCase()))) {
-			throw new Exception("Property name "+ key +" is not found. Please check config.properties");
+			throw new PropertyFileException("Property name "+ key +" is not found. Please check config.properties");
 		}
 		return CONFIGMAP.get(key.name().toLowerCase());
 	}
 	
 	//Hashtable -- little slow, thread safe
-	public static String getValue(String key) throws Exception {
+	public static String getValue(String key){
 		
 		if (Objects.isNull(property.getProperty(key)) || Objects.isNull(key)) {
-			throw new Exception("Property name "+ key +" is not fournd. Please check config.properties");
+			throw new PropertyFileException("Property name "+ key +" is not fournd. Please check config.properties");
 		}
 		return property.getProperty(key);		
 	}

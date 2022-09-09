@@ -2,6 +2,7 @@ package com.tmb.reports;
 
 import java.awt.Desktop;
 import java.io.File;
+import java.io.IOException;
 import java.util.Objects;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -21,7 +22,7 @@ public final class ExtentReport {
 	
 	private static ExtentReports extent;
 	
-	public static void initReports() throws Exception {
+	public static void initReports() {
 		if (Objects.isNull(extent)) {
 			extent=new ExtentReports();
 			ExtentSparkReporter spark = new ExtentSparkReporter(FrameworkConstants.getExtentReportFilePath());
@@ -40,12 +41,16 @@ public final class ExtentReport {
 		
 	}
 	
-	public static void flushReports() throws Exception {
+	public static void flushReports() {
 		if (Objects.nonNull(extent)) {
 			extent.flush();
 		}	
 		ExtentManager.unload();
-		Desktop.getDesktop().browse(new File(FrameworkConstants.getExtentReportFilePath()).toURI());		
+		try {
+			Desktop.getDesktop().browse(new File(FrameworkConstants.getExtentReportFilePath()).toURI());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}		
 	}	
 	
 	public static void createTest(String testcasename) {

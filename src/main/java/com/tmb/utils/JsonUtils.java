@@ -11,6 +11,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tmb.constans.FrameworkConstants;
 import com.tmb.enums.ConfigProperties;
+import com.tmb.exceptions.FrameworkException;
 
 public final class JsonUtils {
 	
@@ -30,9 +31,9 @@ public final class JsonUtils {
 		}			
 	}
 	
-	public static String get(ConfigProperties key) throws Exception {
+	public static String get(ConfigProperties key) {
 		if (Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key.name().toLowerCase()))) {
-			throw new Exception("Property name "+ key +" is not fournd. Please check config.json");
+			throw new FrameworkException("Property name "+ key +" is not fournd. Please check config.json");
 		}
 		return CONFIGMAP.get(key.name().toLowerCase());
 	}

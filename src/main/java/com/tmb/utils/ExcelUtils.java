@@ -12,6 +12,8 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import com.tmb.constans.FrameworkConstants;
+import com.tmb.exceptions.FrameworkException;
+import com.tmb.exceptions.InvalidPathForExcelException;
 
 public final class ExcelUtils {
 
@@ -31,9 +33,6 @@ public final class ExcelUtils {
 			int lastrownum =sheet.getLastRowNum();
 			int lastcolnum = sheet.getRow(0).getLastCellNum();
 			
-			System.out.println(lastrownum);
-			System.out.println(lastcolnum);
-			
 			Map<String,String> datamap = null;
 			list = new ArrayList<>();
 			
@@ -47,12 +46,15 @@ public final class ExcelUtils {
 				list.add(datamap);
 			}
 						
-		} catch (FileNotFoundException e1) {
-			e1.printStackTrace();
+		} catch (FileNotFoundException e) {
+			/*StackTraceElement[] a=e.getStackTrace();
+			a[0] =new StackTraceElement("com.tmb.utils.ExcelUtils","getTestDetails", "ExcelUtils.java", 48);
+			e.setStackTrace(a);*/
+			
+			throw new InvalidPathForExcelException("Excel File You are Trying To Read is Not Found.");
 		} catch (IOException e) {
-			e.printStackTrace();
+			throw new FrameworkException("Some IO Exception happened while reading Excel File.");
 		}		
-		System.out.println(list);
 		return list;
 	}
 }

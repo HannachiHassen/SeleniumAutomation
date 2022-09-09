@@ -9,7 +9,7 @@ import com.tmb.constans.FrameworkConstants;
 import com.tmb.driver.DriverManager;
 import com.tmb.enums.WaitStrategy;
 
-public class ExplicitWaitFactory {
+public final class ExplicitWaitFactory {
 	
     private ExplicitWaitFactory() {
 		
