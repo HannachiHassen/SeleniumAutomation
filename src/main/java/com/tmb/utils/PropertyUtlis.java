@@ -10,7 +10,7 @@ import java.util.Properties;
 
 import com.tmb.constans.FrameworkConstants;
 import com.tmb.enums.ConfigProperties;
-import com.tmb.exceptions.FrameworkException;
+import com.tmb.exceptions.InvalidPathForPropertyFileException;
 import com.tmb.exceptions.PropertyFileException;
 
 public final class PropertyUtlis {
@@ -31,11 +31,11 @@ public final class PropertyUtlis {
 				CONFIGMAP.put(String.valueOf(entry.getKey()), String.valueOf(entry.getValue()).trim()); //remove the trailing and leading spaces		
 			}
 			//property.entrySet().forEach(entry ->CONFIGMAP.put(String.valueOf(entry.getKey()), String.valueOf(entry.getValue()));
-		} catch (FileNotFoundException e) {
+		} catch (Exception e ) {
+			//throw new InvalidPathForPropertyFileException("Please check the Path of the config.properties file");
 			e.printStackTrace();
-		} catch (Exception e) {
-			throw new FrameworkException("Some IO Exception happened while reading Property File.");
-		}			
+			System.exit(0);
+		} 	
 	}
 	
 	// Hashmap ---read everything from properties file

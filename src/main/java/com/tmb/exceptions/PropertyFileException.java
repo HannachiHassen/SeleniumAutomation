@@ -1,7 +1,7 @@
 package com.tmb.exceptions;
 
 @SuppressWarnings("serial")
-public class PropertyFileException extends RuntimeException{
+public class PropertyFileException extends FrameworkException{
 
 	public PropertyFileException(String message) {
 		super(message);

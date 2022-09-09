@@ -18,7 +18,7 @@ public final class FrameworkConstants {
 	private static final String GECKODRIVERPATH= RESOURCESPATH + "/executables/geckodriver.exe";
 	private static final String CONFIGFILEPATH= RESOURCESPATH + "/config/config.properties";
 	private static final String JSONCONFIGFILEPATH= RESOURCESPATH + "/jsons/config.json";
-	private static final String EXCELFILEPATH= RESOURCESPATH + "/excel/testdata1.xlsx";
+	private static final String EXCELFILEPATH= RESOURCESPATH + "/excel/testdata.xlsx";
 	
 	private static final String RUNMANGERSHEET = "RUNMANAGER";
 	private static final String ITERATIONDATASHEET = "DATA";

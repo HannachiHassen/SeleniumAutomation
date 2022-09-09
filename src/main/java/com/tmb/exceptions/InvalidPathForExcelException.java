@@ -1,7 +1,7 @@
 package com.tmb.exceptions;
 
 @SuppressWarnings("serial")
-public class InvalidPathForExcelException extends RuntimeException{
+public class InvalidPathForExcelException extends InvalidPathForFilesException{
 	
 	public InvalidPathForExcelException(String message) {
 		super(message);
