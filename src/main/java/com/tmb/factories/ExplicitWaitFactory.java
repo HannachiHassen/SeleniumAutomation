@@ -21,20 +21,18 @@ public final class ExplicitWaitFactory {
 		if (waitstrategy == WaitStrategy.CLICKABLE) {
 			element= new WebDriverWait(DriverManager.getDriver(), FrameworkConstants.getExplicitWait())
 			.until(ExpectedConditions.elementToBeClickable(by));
-		} 
+			} 
 		else if (waitstrategy == WaitStrategy.PRESENCE) {
 			element= new WebDriverWait(DriverManager.getDriver(), FrameworkConstants.getExplicitWait())
 			.until(ExpectedConditions.presenceOfElementLocated(by));
-		}
+			}
 		else if (waitstrategy == WaitStrategy.VISIBLE) {
 			element= new WebDriverWait(DriverManager.getDriver(), FrameworkConstants.getExplicitWait())
 			.until(ExpectedConditions.visibilityOfElementLocated(by));
-		}
+			}
 		else if (waitstrategy == WaitStrategy.NONE) {
 			element= DriverManager.getDriver().findElement(by);
-		}
+			}
 		return element;
-	}
-
-	
+	}	
 }

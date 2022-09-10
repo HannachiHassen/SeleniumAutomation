@@ -43,9 +43,9 @@ public final class ListenerClass implements ITestListener, ISuiteListener{
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-			ExtentLogger.fail(result.getMethod().getMethodName() + " is Failed", true);
-			ExtentLogger.fail(result.getThrowable().toString());
-			ExtentLogger.fail(Arrays.toString(result.getThrowable().getStackTrace()));
+		ExtentLogger.fail(result.getMethod().getMethodName() + " is Failed", true);
+		ExtentLogger.fail(result.getThrowable().toString());
+		ExtentLogger.fail(Arrays.toString(result.getThrowable().getStackTrace()));
 		System.out.println("after method in listener : fail and I am attaching screenshots here");
 	}
 
