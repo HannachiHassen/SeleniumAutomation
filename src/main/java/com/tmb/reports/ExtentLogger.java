@@ -5,24 +5,61 @@ import com.tmb.enums.ConfigProperties;
 import com.tmb.utils.PropertyUtlis;
 import com.tmb.utils.ScreenshotUtils;
 
+/**
+ * 
+ * Sep 10, 2022
+ * @author HASSEN
+ * @version 1.0
+ * @since 1.0
+ * @see ExtentManager
+ * @see PropertyUtlis
+ */
 public final class ExtentLogger {
 
+	/**
+	 * Private constructor to avoid external instantiation
+	 */
 	private ExtentLogger() {
 
 	}
-
+	
+	/**
+	 * 
+	 * @author Hassen
+	 * Sep 10, 2022
+	 * @param message
+	 */
 	public static void pass(String message) {
 		ExtentManager.getExtentTest().pass(message);
 	}
 
+	/**
+	 * 
+	 * @author Hassen
+	 * Sep 10, 2022
+	 * @param message
+	 */
 	public static void fail(String message) {
 		ExtentManager.getExtentTest().fail(message);
 	}
 
+	/**
+	 * 
+	 * @author Hassen
+	 * Sep 10, 2022
+	 * @param message
+	 */
 	public static void skip(String message) {
 		ExtentManager.getExtentTest().skip(message);
 	}
 	
+	/**
+	 * 
+	 * @author Hassen
+	 * Sep 10, 2022
+	 * @param message
+	 * @param isScreenshotNeeded
+	 */
 	public static void pass(String message, boolean isScreenshotNeeded) {
 		if (PropertyUtlis.get(ConfigProperties.PASSEDSTEPSSCREENSHOTS).equalsIgnoreCase("yes") && isScreenshotNeeded) {
 			 ExtentManager.getExtentTest().pass(message, 
@@ -33,6 +70,13 @@ public final class ExtentLogger {
 		}
 	}
 	
+	/**
+	 * 
+	 * @author Hassen
+	 * Sep 10, 2022
+	 * @param message
+	 * @param isScreenshotNeeded
+	 */
 	public static void fail(String message, boolean isScreenshotNeeded) {
 		if (PropertyUtlis.get(ConfigProperties.FAILEDSTEPSSCREENSHOTS).equalsIgnoreCase("yes") && isScreenshotNeeded) {
 			 ExtentManager.getExtentTest().fail(message, 
@@ -43,6 +87,13 @@ public final class ExtentLogger {
 		}
 	}
 	
+	/**
+	 * 
+	 * @author Hassen
+	 * Sep 10, 2022
+	 * @param message
+	 * @param isScreenshotNeeded
+	 */
 	public static void skip(String message, boolean isScreenshotNeeded){
 		if (PropertyUtlis.get(ConfigProperties.SKIPPEDSTEPSSCREENSHOTS).equalsIgnoreCase("yes") && isScreenshotNeeded) {
 			 ExtentManager.getExtentTest().skip(message, 

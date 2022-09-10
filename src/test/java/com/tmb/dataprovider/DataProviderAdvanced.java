@@ -13,7 +13,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.tmb.constans.FrameworkConstants;
+import com.tmb.constants.FrameworkConstants;
 
 public class DataProviderAdvanced {
 	public static List<Map<String,String>> smalllist= new ArrayList<>();

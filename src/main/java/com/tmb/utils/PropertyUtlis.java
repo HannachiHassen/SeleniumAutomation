@@ -8,13 +8,23 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Properties;
 
-import com.tmb.constans.FrameworkConstants;
+import com.tmb.constants.FrameworkConstants;
 import com.tmb.enums.ConfigProperties;
 import com.tmb.exceptions.InvalidPathForPropertyFileException;
 import com.tmb.exceptions.PropertyFileException;
 
+/**
+ * 
+ * Sep 10, 2022
+ * @author HASSEN
+ * @version 1.0
+ * @since 1.0
+ */
 public final class PropertyUtlis {
 
+	/**
+	 * 
+	 */
 	private PropertyUtlis() {
 
 	}
@@ -37,7 +47,13 @@ public final class PropertyUtlis {
 			System.exit(0);
 		} 	
 	}
-	
+	/**
+	 * 
+	 * @author Hassen
+	 * Sep 10, 2022
+	 * @param key
+	 * @return
+	 */
 	// Hashmap ---read everything from properties file
 	// Converting a property to hashmap needs some time	
 	public static String get(ConfigProperties key) {
@@ -47,6 +63,13 @@ public final class PropertyUtlis {
 		return CONFIGMAP.get(key.name().toLowerCase());
 	}
 	
+	/**
+	 * 
+	 * @author Hassen
+	 * Sep 10, 2022
+	 * @param key
+	 * @return
+	 */
 	//Hashtable -- little slow, thread safe
 	public static String getValue(String key){
 		

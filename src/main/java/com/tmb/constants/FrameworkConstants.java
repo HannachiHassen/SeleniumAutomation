@@ -1,10 +1,24 @@
-package com.tmb.constans;
+package com.tmb.constants;
 
 
 import com.tmb.enums.ConfigProperties;
 import com.tmb.utils.PropertyUtlis;
-
+/**
+ * Framework Constants holds all the constant values used within the framework. 
+ * If some value needs to be changed or modified often, then it should be stored in the property files
+ * 
+ * Sep 10, 2022
+ * @author HASSEN
+ * @version 1.0
+ * @since 1.0
+ * @see com.tmb.utils.PropertyUtlis
+ */
 public final class FrameworkConstants {
+	
+	/**
+	 * 
+	 * Private constructor to avoid external instantiation
+	 */
 	
     private FrameworkConstants() {
 		
@@ -27,6 +41,12 @@ public final class FrameworkConstants {
 	
 	private static String extentReportFilePath= "";
 	
+	/**
+	 * 
+	 * @author Hassen
+	 * Sep 10, 2022
+	 * @return Extent Report path where the index.html file will be generated.
+	 */
 	public static String getExtentReportFilePath() {
 		if (extentReportFilePath.isEmpty()) {
 			return extentReportFilePath=createReportPath();
@@ -34,6 +54,13 @@ public final class FrameworkConstants {
 		return extentReportFilePath;
 	}	
 
+	/**
+	 * 
+	 * @author Hassen
+	 * Sep 10, 2022
+	 * @return  If Override reports value in the 
+	 * property file is no,then the timestamp will be appended
+	 */
 	private static String createReportPath() {
 		if (PropertyUtlis.get(ConfigProperties.OVERRIDEREPORTS).equals("no")) {
 			return EXTENTREPORTFOLDERPATH + System.currentTimeMillis()+ "/index.html";
@@ -42,7 +69,11 @@ public final class FrameworkConstants {
 			return EXTENTREPORTFOLDERPATH + "/index.html";
 		}
 	}
-		
+	
+	/* 
+	 * TODO Lombak Plugin to remove the boiler plate code
+	 */
+	
 	public static int getExplicitWait() {
 		return EXPLICITWAIT;
 	}
@@ -51,13 +82,14 @@ public final class FrameworkConstants {
 		return CONFIGFILEPATH;
 	}
 
-	public static String getChromeDriverPath() {
-		return CHROMEDRIVERPATH;
-	}	
-
+	
 	public static String getGeckoDriverPath() {
 		return GECKODRIVERPATH ;
 	}
+	
+	public static String getChromeDriverPath() {
+		return CHROMEDRIVERPATH;
+	}	
 
 	public static String getJsonConfigFilePath() {
 		return JSONCONFIGFILEPATH;

@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import com.tmb.constans.FrameworkConstants;
+import com.tmb.constants.FrameworkConstants;
 import com.tmb.enums.ConfigProperties;
 import com.tmb.utils.PropertyUtlis;
 

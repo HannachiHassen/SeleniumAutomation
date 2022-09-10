@@ -11,20 +11,38 @@ import java.util.Map;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import com.tmb.constans.FrameworkConstants;
+import com.tmb.constants.FrameworkConstants;
 import com.tmb.exceptions.FrameworkException;
 import com.tmb.exceptions.InvalidPathForExcelException;
 
+/**
+ * 
+ * Sep 10, 2022
+ * @author HASSEN
+ * @version 1.0
+ * @since 1.0
+ */
 public final class ExcelUtils {
 
+	/**
+	 * 
+	 */
 	private ExcelUtils() {
 		
 	}
 	
-	//try with resources
+	/**
+	 * 
+	 * @author Hassen
+	 * Sep 10, 2022
+	 * @param sheetname
+	 * @return
+	 */
+	
 	public static List<Map<String, String>> getTestDetails(String sheetname) {
 		List<Map<String,String>> list = null;
 		
+		//try with resources
 		try (FileInputStream fs = new FileInputStream(FrameworkConstants.getExcelFilePath())){
 			
 			XSSFWorkbook workbook = new XSSFWorkbook(fs);
