@@ -82,7 +82,6 @@ public final class FrameworkConstants {
 		return CONFIGFILEPATH;
 	}
 
-	
 	public static String getGeckoDriverPath() {
 		return GECKODRIVERPATH ;
 	}

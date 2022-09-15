@@ -1,14 +1,24 @@
 package com.tmb.driver;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Objects;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.tmb.constants.FrameworkConstants;
 import com.tmb.enums.ConfigProperties;
+import com.tmb.exceptions.BrowserInvocationFailedException;
+import com.tmb.factories.DriverFactory;
 import com.tmb.utils.PropertyUtlis;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.config.DriverManagerType;
 
 /**
  * 
@@ -37,25 +47,20 @@ public final class Driver {
 	private Driver() {
 
 	}
-	
+
 	/**
 	 * 
 	 * @author Hassen
 	 * Sep 10, 2022
-	 * @param browser value will be passed from {@link com.tmb.tests.BaseTest}. Values can be chrome and firefox
+	 * @param browser value will be passed from {@link com.tmb.tests.BaseTest}. Values can be chrome, firefox and edge
+	 * @param version value will be passed from {@link com.tmb.tests.BaseTest}. 
 	 */
-
-	public static void initDriver(String browser) {
+	public static void initDriver(String browser, String version) {
 		if (Objects.isNull(DriverManager.getDriver())) {
-			if (browser.equalsIgnoreCase("firefox")) {
-				System.setProperty("webdriver.gecko.driver", FrameworkConstants.getGeckoDriverPath());
-				DriverManager.setDriver(new FirefoxDriver());
-			} else if (browser.equalsIgnoreCase("chrome")) {
-				System.setProperty("webdriver.chrome.driver", FrameworkConstants.getChromeDriverPath());
-				DriverManager.setDriver(new ChromeDriver());
-			} else if (browser.equalsIgnoreCase("edge")) {
-				System.setProperty("webdriver.edge.driver", FrameworkConstants.getChromeDriverPath());
-				DriverManager.setDriver(new EdgeDriver());
+			try {
+				DriverManager.setDriver(DriverFactory.getDriver(browser, version));
+			} catch (MalformedURLException e) {
+				throw new BrowserInvocationFailedException("Please check the capabilities of browser");
 			}
 			DriverManager.getDriver().get(PropertyUtlis.get(ConfigProperties.URL));
 		}

@@ -8,8 +8,8 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.reports.ExtentLogger;
 import com.tmb.annotations.FrameworkAnnotation;
-import com.tmb.reports.ExtentLogger;
 import com.tmb.reports.ExtentReport;
 
 /**
@@ -61,7 +61,7 @@ public final class ListenerClass implements ITestListener, ISuiteListener{
 
 	/**
 	 * Marks the test as pass and logs it in the report
-	 * @see com.tmb.reports.FrameworkLogger
+	 * @see com.reports.ExtentLogger
 	 */	
 	@Override
 	public void onTestSuccess(ITestResult result) {
@@ -71,7 +71,7 @@ public final class ListenerClass implements ITestListener, ISuiteListener{
 
 	/**
 	 * Marks the test as fail,append base64 screenshot and logs it in the report
-	 * @see com.tmb.reports.FrameworkLogger
+	 * @see com.reports.ExtentLogger
 	 * @see com.tmb.utils.ScreenshotUtils
 	 */
 	@Override
@@ -84,7 +84,7 @@ public final class ListenerClass implements ITestListener, ISuiteListener{
 
 	/**
 	 * Marks the test as skip and logs it in the report
-	 * @see com.tmb.reports.FrameworkLogger
+	 * @see com.reports.ExtentLogger
 	 */
 	@Override
 	public void onTestSkipped(ITestResult result) {

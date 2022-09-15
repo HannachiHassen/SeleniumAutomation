@@ -11,8 +11,8 @@ import com.tmb.utils.ScreenshotUtils;
  * @author HASSEN
  * @version 1.0
  * @since 1.0
- * @see ExtentManager
- * @see PropertyUtlis
+ * @see com.tmb.reports.ExtentManager
+ * @see com.tmb.utils.PropertyUtlis
  */
 public final class ExtentLogger {
 

@@ -8,7 +8,7 @@ package com.tmb.exceptions;
  * @version 1.0
  * @since 1.0
  * @see com.tmb.constants.FrameworkConstants
- * @see com.tmb.utils.PropertyUtils
+ * @see com.tmb.utils.PropertyUtlis
  */
 @SuppressWarnings("serial")
 public class PropertyFileException extends FrameworkException{

@@ -25,7 +25,7 @@ public class InvalidPathForPropertyFileException extends InvalidPathForFilesExce
 	 * @param message Details about the exception or custom message
 	 * @param cause Pass the enriched stacktrace or customised stacktrace
 	 */
-	public InvalidPathForPropertyFileException(String message, Throwable casue) {
-		super(message, casue);
+	public InvalidPathForPropertyFileException(String message, Throwable cause) {
+		super(message, cause);
 	}
 }
