@@ -8,9 +8,10 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import com.reports.ExtentLogger;
+import com.tmb.reports.ExtentLogger;
 import com.tmb.annotations.FrameworkAnnotation;
 import com.tmb.reports.ExtentReport;
+import com.tmb.utils.ELKUtils;
 
 /**
  * Implements {@link org.testng.ITestListener} and {@link org.testng.ISuiteListener} to leverage the abstract methods
@@ -66,6 +67,7 @@ public final class ListenerClass implements ITestListener, ISuiteListener{
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		ExtentLogger.pass(result.getMethod().getMethodName()+ " is Passed");
+		ELKUtils.sendDetailsToElk(result.getMethod().getDescription(), "pass");
 		System.out.println("after method in listener : pass");
 	}
 
@@ -79,6 +81,7 @@ public final class ListenerClass implements ITestListener, ISuiteListener{
 		ExtentLogger.fail(result.getMethod().getMethodName() + " is Failed", true);
 		ExtentLogger.fail(result.getThrowable().toString());
 		ExtentLogger.fail(Arrays.toString(result.getThrowable().getStackTrace()));
+		ELKUtils.sendDetailsToElk(result.getMethod().getDescription(), "fail");
 		System.out.println("after method in listener : fail and I am attaching screenshots here");
 	}
 
@@ -89,6 +92,7 @@ public final class ListenerClass implements ITestListener, ISuiteListener{
 	@Override
 	public void onTestSkipped(ITestResult result) {
 		ExtentLogger.skip(result.getMethod().getMethodName() + " is Skipped");
+		ELKUtils.sendDetailsToElk(result.getMethod().getDescription(), "skip");
 		System.out.println("after method in listener : skipped and ignored");
 	}
 	

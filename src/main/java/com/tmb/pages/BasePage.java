@@ -3,7 +3,7 @@ package com.tmb.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import com.reports.ExtentLogger;
+import com.tmb.reports.ExtentLogger;
 import com.tmb.driver.DriverManager;
 import com.tmb.enums.WaitStrategy;
 import com.tmb.factories.ExplicitWaitFactory;
